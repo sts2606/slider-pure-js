@@ -1,8 +1,8 @@
-const slider = document.getElementById('slider');
 const sliderItems = document.querySelectorAll('.slider-item');
 const pausePLayButton = document.getElementById('pause-play-button');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
+
 let activeItem = 0;
 let isSliderMoving = true;
 
@@ -16,11 +16,9 @@ function createAutoSlider() {
 
 function changeActiveItemAuto() {
   toggleActive();
-  if (activeItem === sliderItems.length - 1) {
-    activeItem = 0;
-  } else {
-    activeItem++;
-  }
+
+  activeItem = activeItem === sliderItems.length - 1 ? 0 : activeItem + 1;
+
   toggleActive();
 }
 
