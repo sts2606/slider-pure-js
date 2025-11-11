@@ -121,7 +121,7 @@ const caruselPrototype = {
       this.isSliderMoving = false;
     } else {
       this.pausePLayButton.innerText = 'Pause';
-      this.intervalId = this.createAutoSlider();
+      this.createAutoSlider();
       this.isSliderMoving = true;
     }
   },
